@@ -1,4 +1,5 @@
 import 'package:animations/ex.dart';
+import 'package:animations/transitions/transitions.dart';
 import 'package:animations/tryingAnimations.dart';
 import 'package:animations/tryingAnimations2.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,7 @@ class _MyHomePageState extends State<MyHomePage>
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
-      ),
+        ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -36,6 +37,10 @@ class _MyHomePageState extends State<MyHomePage>
             ElevatedButton(onPressed:
                 () => Navigator.push(context, MaterialPageRoute(builder: (context) => tryingAnimations2())),
               child: Text("Haley's Animations"),
+            ),
+            ElevatedButton(onPressed:
+                () => Navigator.push(context, MaterialPageRoute(builder: (context) => transistions())),
+              child: Text("Transisions"),
             ),
             Container(
               margin: const EdgeInsets.symmetric(vertical: 10),
